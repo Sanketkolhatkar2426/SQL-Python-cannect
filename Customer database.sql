@@ -1,0 +1,65 @@
+create database customer_st;
+use customer_st;
+
+CREATE TABLE menu_items (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    item_name VARCHAR(100) NOT NULL,
+    description TEXT,
+    price DECIMAL(5, 2) NOT NULL,
+    category VARCHAR(50),
+    availability BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+INSERT INTO menu_items (item_name, description, price, category) VALUES
+('Margherita Pizza', 'Classic pizza with tomato, mozzarella, and basil', 8.99, 'Pizza'),
+('Pepperoni Pizza', 'Pizza with pepperoni, tomato, and mozzarella', 9.99, 'Pizza'),
+('BBQ Chicken Pizza', 'Pizza with BBQ sauce, chicken, and onions', 10.99, 'Pizza'),
+('Hawaiian Pizza', 'Pizza with ham, pineapple, and cheese', 9.49, 'Pizza'),
+('Veggie Pizza', 'Pizza with mushrooms, peppers, onions, and olives', 9.29, 'Pizza'),
+('Spaghetti Carbonara', 'Pasta with bacon, egg, and cheese', 12.99, 'Pasta'),
+('Fettuccine Alfredo', 'Pasta with creamy Alfredo sauce', 11.99, 'Pasta'),
+('Lasagna', 'Layered pasta with meat, cheese, and tomato sauce', 13.99, 'Pasta'),
+('Chicken Parmesan', 'Breaded chicken with marinara sauce and cheese', 14.99, 'Main Course'),
+('Grilled Salmon', 'Salmon fillet with lemon and herbs', 17.99, 'Main Course'),
+('Caesar Salad', 'Salad with romaine lettuce, croutons, and Caesar dressing', 7.99, 'Salad'),
+('Greek Salad', 'Salad with cucumbers, tomatoes, olives, and feta cheese', 8.49, 'Salad'),
+('Garden Salad', 'Mixed greens with tomatoes, cucumbers, and carrots', 6.99, 'Salad'),
+('Mushroom Risotto', 'Creamy risotto with mushrooms and Parmesan cheese', 12.49, 'Main Course'),
+('Beef Burger', 'Beef patty with lettuce, tomato, and cheese', 10.99, 'Main Course'),
+('Cheeseburger', 'Beef patty with cheese, lettuce, and tomato', 11.49, 'Main Course'),
+('Veggie Burger', 'Vegetarian patty with lettuce, tomato, and cheese', 10.49, 'Main Course'),
+('Chicken Wings', 'Spicy chicken wings with dipping sauce', 9.99, 'Appetizer'),
+('Mozzarella Sticks', 'Fried mozzarella sticks with marinara sauce', 7.99, 'Appetizer'),
+('Onion Rings', 'Crispy onion rings with dipping sauce', 6.49, 'Appetizer'),
+('Fish and Chips', 'Fried fish with French fries', 13.49, 'Main Course'),
+('Shrimp Scampi', 'Shrimp in garlic butter sauce with pasta', 15.99, 'Main Course'),
+('Chicken Alfredo', 'Pasta with chicken and Alfredo sauce', 14.49, 'Pasta'),
+('Tiramisu', 'Italian dessert with coffee, mascarpone, and cocoa', 6.99, 'Dessert'),
+('Cheesecake', 'Creamy cheesecake with a graham cracker crust', 7.49, 'Dessert'),
+('Chocolate Cake', 'Rich chocolate cake with frosting', 6.49, 'Dessert'),
+('Apple Pie', 'Classic apple pie with cinnamon', 5.99, 'Dessert'),
+('Ice Cream Sundae', 'Vanilla ice cream with chocolate sauce and nuts', 4.99, 'Dessert'),
+('Panna Cotta', 'Italian dessert with creamy custard', 5.99, 'Dessert'),
+('Garlic Bread', 'Toasted bread with garlic and butter', 3.99, 'Appetizer'),
+('Bruschetta', 'Grilled bread with tomato and basil', 5.49, 'Appetizer'),
+('Clam Chowder', 'Creamy soup with clams and potatoes', 8.99, 'Soup'),
+('Minestrone', 'Hearty Italian vegetable soup', 7.49, 'Soup'),
+('Tomato Soup', 'Classic tomato soup with herbs', 6.99, 'Soup'),
+('French Onion Soup', 'Onion soup with melted cheese and croutons', 8.49, 'Soup'),
+('Roast Chicken', 'Roasted chicken with herbs and vegetables', 16.99, 'Main Course'),
+('Steak Frites', 'Grilled steak with French fries', 18.99, 'Main Course'),
+('Pork Chops', 'Grilled pork chops with applesauce', 15.49, 'Main Course'),
+('Lobster Bisque', 'Rich and creamy lobster soup', 9.99, 'Soup'),
+('Caesar Wrap', 'Caesar salad in a tortilla wrap', 8.99, 'Main Course'),
+('Club Sandwich', 'Sandwich with turkey, bacon, lettuce, and tomato', 9.99, 'Main Course'),
+('BLT Sandwich', 'Bacon, lettuce, and tomato sandwich', 7.99, 'Main Course'),
+('Turkey Sandwich', 'Turkey breast with lettuce and mayo', 8.49, 'Main Course'),
+('Eggplant Parmesan', 'Baked eggplant with marinara and cheese', 13.99, 'Main Course'),
+('Grilled Cheese Sandwich', 'Toasted sandwich with melted cheese', 6.49, 'Main Course'),
+('Pasta Primavera', 'Pasta with fresh vegetables and olive oil', 11.49, 'Pasta'),
+('Baked Ziti', 'Pasta baked with tomato sauce and cheese', 12.49, 'Pasta'),
+('Chicken Caesar Salad', 'Caesar salad topped with grilled chicken', 9.49, 'Salad');
+
+select * from menu_items;
